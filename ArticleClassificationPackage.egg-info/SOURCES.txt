@@ -1,0 +1,8 @@
+setup.py
+ArticleClassificationPackage/__init__.py
+ArticleClassificationPackage.egg-info/PKG-INFO
+ArticleClassificationPackage.egg-info/SOURCES.txt
+ArticleClassificationPackage.egg-info/dependency_links.txt
+ArticleClassificationPackage.egg-info/not-zip-safe
+ArticleClassificationPackage.egg-info/requires.txt
+ArticleClassificationPackage.egg-info/top_level.txt

@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: ArticleClassificationPackage
+Version: 0.1
+Summary: A package for collecting user classifications of news articles for regression analysis
+Home-page: https://github.com/ciberkeley/Article-Classification-Package.git
+Author: Brandon Flannery
+Author-email: brandon@ciberkeley.com
+License: Capital Investments at Berkeley LLC
+Description: UNKNOWN
+Platform: UNKNOWN
