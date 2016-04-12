@@ -33,12 +33,48 @@ processing.
 
 ### How do I get set up? ###
 
-* cd  ~/.../Article-Scoring-Package
-* python setup.py install
+* Open your Terminal(Mac) or  CommandLine(Windows)
+
+* NOTE: All lines beginning with "$" indicate you should enter than line in your terminal
+* NOTE: You will need a USERNAME and PASSWORD from mongoLab.
+* NOTE: You will need to download "MiniConda: Python 2.7"
+    * http://conda.pydata.org/miniconda.html
+    (On a Mac)
+    $ cd Downloads
+    $ bash Miniconda2-latest-MacOSX-x86_64.sh
+
+* NOTE: You will need to create an environment
+    $ conda create -n py2k python=2.7
+
+* NOTE: You will need to activate py2k as your environment
+    $ source activate py2k
+
+* Change directories ($ cd DESIRED-DIRECTORY) to a folder you would like to save the ArticleClassificationPackage
+* Enter the following commands into your terminal
+    $ git clone https://github.com/ciberkeley/Article-Classification-Package.git
+        * This will copy the package into your current directory/folder
+        * You can also retrieve this package by unzipping an Article-Classification-Package.zip file
+          in the desired directory/folder
+    $ cd Article-Classification-Package
+    $ python setup.py develop
+    $ python
+    >>> import ArticleClassificationPackage as ACP
+    >>> acp = ACP.ArticleClassificationPackage(USERNAME, PASSWORD)
+    >>> article = acp.get_article()
+    >>> article_text = acp.get_text(article)
+    >>> acp.classify(article, _class = 0)
+        * This will get an article, save the article_text, and classify the article as negative 
+          under your provided user credentials
 
 ### Operation Guidelines ###
 
-* (To be edited)
+* As show in the previous section, there are methods to get and article, extract the article text for reading, and classify the article as positive (1) or negative (0).
+* All articles are pulled from the 'articles' collection from the  Capital Investments at Berkeley mongoDB
+* All user classifications are saved to the 'classify' collection in the Capital Investments at Berkeley mongoDB
+* NOTE: You can only classify an article as positive or negative.
+    * Odd Integers indicate positive articles
+    * Even Integers indicate negative articles
+    * Non-Integers will return an error 
 
 ### Contribution guidelines ###
 
@@ -46,4 +82,4 @@ processing.
 
 ### Who do I talk to? ###
 
-* Brandon Flannery | brandon.flannery@pluribuslabs.com
+* Brandon Flannery | bflannery@ciberkeley.com
